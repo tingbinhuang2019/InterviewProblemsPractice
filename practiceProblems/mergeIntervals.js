@@ -33,11 +33,9 @@ let reOrder = (arr) => {
 		b.push(arr[i].end);
 		a.push(b);
 	}
-
 	a.sort((a,b) => {
 		return a[0] - b[0];
 	})
-
 	for(let i = 0; i < a.length; i++) {
 		let temp = new Interval(a[i][0], a[i][1]); 
 		newArray.push(temp);
@@ -62,31 +60,24 @@ let check = (i1, i2) => {
 }
 
 var merge = function(intervals) {
-
 	if(intervals.length <= 1) return intervals;
 	intervals = reOrder(intervals);
-
 	let ptr1 = 0; 
 	let ptr2 = 1; 	
 	let arr = []; 
-	let temp; 
-
+	let temp;
 	while(ptr2 < intervals.length) {
-
 		if(check(intervals[ptr1], intervals[ptr2])) {
 			let tempArray = []; 
 			intervals[ptr1].start = Math.min(intervals[ptr1].start, intervals[ptr2].start);
 			intervals[ptr1].end = Math.max(intervals[ptr1].end, intervals[ptr2].end); 
-
 			intervals[ptr2].start = "n";
 			intervals[ptr2].end = "n";
 		} else {
-
 			ptr1 = ptr2;
 		}
 		ptr2++;
 	}
-
 	for(let i = 0; i < intervals.length; i++) {
 		if(intervals[i].start !== 'n') {
 			arr.push(intervals[i]);
@@ -94,15 +85,4 @@ var merge = function(intervals) {
 	}
 	return arr;
 };
-
-
-      
-
-
-
-
-
-
-
-
 
