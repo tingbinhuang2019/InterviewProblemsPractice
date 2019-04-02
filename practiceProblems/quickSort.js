@@ -7,28 +7,25 @@ let swap = (arr, i, j) => {
 
 let findPivot = (arr, start, end) => {
 	let pivot = start;
-	let index = start; 
-	let i = start + 1; 
+	let swapIndex = start;
+	let i = start; 
 
-	while(i <= end) {
+	while( i <= end) {
 		if(arr[pivot] > arr[i]) {
-			index++; 
-			swap(arr, i, index);
+			swapIndex++;
+			swap(arr, swapIndex, i);
 		}
 		i++;
 	}
-	swap(arr, index, pivot);
-	return index;
+	swap(arr, pivot, swapIndex);
+	return swapIndex;
 }
 
 let quickSort = (arr, start, end) => {
-	if(start < end){
+	if(start < end) {
 		let pivot = findPivot(arr, start, end);
-		quickSort(arr,start, pivot - 1); 
-		quickSort(arr,pivot + 1,  end);		
+		quickSort(arr, start, pivot - 1);
+		quickSort(arr, pivot + 1, end);
 	}
 }
-
-
-
 
