@@ -108,19 +108,17 @@ class BST1 {
   }
 
   print() {
-    let data = [];
-    this.printInOrder(this.root, data);
-    return data;
+    this.printInOrder(this.root);
   }
 
-  printInOrder(root, data) {
+  printInOrder(root) {
     if (root === null) return;
     if (root.left) {
-      this.printInOrder(root.left, data);
+      this.printInOrder(root.left);
     }
     console.log(root.value);
     if (root.right) {
-      this.printInOrder(root.right, data);
+      this.printInOrder(root.right);
     }
   }
 }
