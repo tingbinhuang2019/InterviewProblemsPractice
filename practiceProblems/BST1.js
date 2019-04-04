@@ -13,6 +13,7 @@ class BST1 {
     this.root = null;
     this.obj = {};
   }
+
   //Insert method in BST. 
   insert(val) {
     let newNode;
@@ -45,6 +46,7 @@ class BST1 {
       }
     }
   }
+
   //Find method in BST.
   find(val) {
     if (this.root === null) return false;
