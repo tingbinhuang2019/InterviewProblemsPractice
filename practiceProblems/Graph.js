@@ -71,11 +71,9 @@ class Graph {
     let data = [];
     let visited = {};
     let queue = [];
-
     let bfs = (start) => {
       visited[start] = true;
       data.push(start);
-
       for (let i = 0; i < this.ajacencyList[start].length; i++) {
         let vertex = this.ajacencyList[start][i];
         if (!visited[vertex]) {
@@ -102,7 +100,6 @@ class Graph {
           queue.push(this.ajacencyList[item][i]);
         }
       }
-
     }
     return data;
   }
