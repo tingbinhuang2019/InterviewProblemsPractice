@@ -17,4 +17,5 @@ let checkValidBST = (root) => {
     if (!checkBST(root.right)) return false;
     return true;
   }
+  return checkBST(root);
 }
