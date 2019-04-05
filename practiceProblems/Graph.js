@@ -65,4 +65,45 @@ class Graph {
     }
     return data;
   }
+
+  // bfs recursive version
+  bfsRecursive(start) {
+    let data = [];
+    let visited = {};
+    let queue = [];
+
+    let bfs = (start) => {
+      visited[start] = true;
+      data.push(start);
+
+      for (let i = 0; i < this.ajacencyList[start].length; i++) {
+        let vertex = this.ajacencyList[start][i];
+        if (!visited[vertex]) {
+          bfs(vertex);
+        }
+      }
+    }
+    bfs(start);
+    return data;
+  }
+
+  // bfs iterative version
+  bfsIterative(start) {
+    let data = [];
+    let visited = {};
+    let queue = [];
+    queue.push(start);
+    while (queue.length) {
+      let item = queue.shift();
+      if (!visited[item]) {
+        visited[item] = true;
+        data.push(item);
+        for (let i = 0; i < this.ajacencyList[item].length; i++) {
+          queue.push(this.ajacencyList[item][i]);
+        }
+      }
+
+    }
+    return data;
+  }
 }
