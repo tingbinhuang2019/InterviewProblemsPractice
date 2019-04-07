@@ -96,3 +96,20 @@ graph.addEdge("F", "G", 4);
 graph.addEdge("E", "G", 1);
 
 console.log(graph.dijkstra("A", "G"));
+// [ 'A', 'C', 'D', 'F', 'E', 'G' ] 
+
+console.log(graph.dijkstra("A", "E"));
+//[ 'A', 'C', 'D', 'F', 'E' ]
+
+/*
+
+                        A
+                      /    \
+                     C      B
+                    / \     |
+                    |  D -  E
+                     \ |  / |
+                        F   |
+                        |   /
+                         G
+*/
