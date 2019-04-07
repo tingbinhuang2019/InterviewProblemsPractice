@@ -26,6 +26,7 @@ class Graph {
     this.adjacencyList[vertex2].push({ node: vertex1, weight });
   }
 
+  // Using dijkstra method to find shortest path between two nodes in this function.
   dijkstra(start, finish) {
     let queue = new PriorityQueue();
     let distance = {};
