@@ -1,4 +1,5 @@
 
+// Implement quick sort in ES6
 let swap = (arr, i, j) => {
   let temp = arr[i];
   arr[i] = arr[j];
