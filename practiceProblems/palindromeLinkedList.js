@@ -41,7 +41,7 @@ var isPalindrome = function (head) {
 };
 
 /* 
-  Function to print all node in linked list.
+  Function to print all node-value from linked list.
 */
 let printNode = (head) => {
   let cur = head;
