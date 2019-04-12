@@ -8,11 +8,16 @@ function ListNode(val) {
 }
 
 var isPalindrome = function (head) {
+
+  if (head === null || head.next === null) {
+    return true;
+  }
+
   let midNode = head;
   let fast = head.next;
 
   // Finding mid-point in linked list
-  while (fast !== null) {
+  while (fast !== null && fast.next !== null) {
     midNode = midNode.next;
     fast = fast.next.next;
   }
