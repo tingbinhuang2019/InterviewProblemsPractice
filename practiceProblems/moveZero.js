@@ -1,3 +1,5 @@
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 
 let swap = (nums, i, j) => {
   let temp = nums[i];
