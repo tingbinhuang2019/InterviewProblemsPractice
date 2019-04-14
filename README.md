@@ -1,3 +1,3 @@
 # InterviewProblemsPractice
 
-This is personal repo for practicing interview type problems in JavaScript only.
+This is a personal repository for practicing interview type problems in JavaScript only.
