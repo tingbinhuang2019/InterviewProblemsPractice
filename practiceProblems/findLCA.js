@@ -4,22 +4,23 @@ function TreeNode(val) {
 }
 
 var lowestCommonAncestor = function (root, p, q) {
-  if (root === null) {
-    return -1;
+  if (!root) {
+    return null;
   }
 
-  if (root.val === p || root.val === q) {
-    return root.val;
+  if (root.val === p.val || root.val === q.val) {
+    return root;
   }
 
   let l = lowestCommonAncestor(root.left, p, q);
   let r = lowestCommonAncestor(root.right, p, q);
 
-  if (l !== -1 && r !== -1) {
-    return root.val;
-  } else {
-    return l + r + 1;
+  if (l && r) {
+    return root;
+  } else if (l) {
+    return l;
   }
+  return r;
 };
 
 let a = new TreeNode(3);
