@@ -10,7 +10,7 @@ var searchRange = function (nums, target) {
   let start = findFirst(nums, target);
   let end = findLast(nums, target);
 
-  if (start < end) {
+  if (start <= end) {
     arr[0] = start;
     arr[1] = end;
   }
@@ -58,6 +58,8 @@ let findLast = (nums, target) => {
   return -1;
 }
 
-let arr = [1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 66, 66];
+// let arr = [1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 66, 66];
+// console.log(searchRange(arr, 5)); // [7,9]
 
-console.log(searchRange(arr, 5)); // [7,9]
+arr = [1];
+console.log(searchRange(arr, 1));
