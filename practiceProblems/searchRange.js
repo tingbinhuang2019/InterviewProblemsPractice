@@ -58,8 +58,8 @@ let findLast = (nums, target) => {
   return -1;
 }
 
-// let arr = [1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 66, 66];
-// console.log(searchRange(arr, 5)); // [7,9]
+let arr = [1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 66, 66];
+console.log(searchRange(arr, 5)); // [7,9]
 
 arr = [1];
-console.log(searchRange(arr, 1));
+console.log(searchRange(arr, 1)); // [0,0]
