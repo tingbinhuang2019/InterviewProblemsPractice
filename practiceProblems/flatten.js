@@ -10,7 +10,6 @@ let treeToLinkedList = (root) => {
     if (root === null) {
       return;
     }
-
     flatten(root.right);
     flatten(root.left);
     root.right = pre;
@@ -20,12 +19,10 @@ let treeToLinkedList = (root) => {
   flatten(root);
   return root;
 }
-
 let tree = new TreeNode(5);
 tree.left = new TreeNode(3);
 tree.right = new TreeNode(6);
 tree.left.left = new TreeNode(2);
 tree.left.right = new TreeNode(4);
 tree.right.right = new TreeNode(7);
-
 console.log(treeToLinkedList(tree));
